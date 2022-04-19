@@ -13,7 +13,8 @@ const connect = function () {
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
-  conn.on('connect', () => {
+  conn.setTimeout(1500);
+  conn.on('timeout', () => {
     console.log('you ded cuz you idled');
   });
 
