@@ -11,7 +11,16 @@ const connect = function () {
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
-  conn.setTimeout(1500);
+  //print message once connected
+  conn.on('connect', () => {
+    console.log('Successfully connected to game server');
+  });
+
+  conn.on('connect', () => {
+    conn.write('Name: MH');
+  });
+
+  conn.setTimeout(2000);
   conn.on('timeout', () => {
     console.log('you ded cuz you idled');
   });
