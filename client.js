@@ -35,9 +35,6 @@ const connect = function () {
   return conn;
 };
 
-console.log('Connecting...');
-connect();
-
 module.exports = {connect};
 
 // Consider what is happening in the code that you wrote so far:
