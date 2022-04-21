@@ -6,6 +6,12 @@ const handleUserInput = function (input) {
     process.exit();
   } else if (input === 'w') {
     connection.write('Move: up');
+  } else if (input === 's') {
+    connection.write('Move: down');
+  } else if (input === 'a') {
+    connection.write('Move: left');
+  } else if (input === 'd') {
+    connection.write('Move: right');
   }
 };
 
