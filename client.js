@@ -20,6 +20,13 @@ const connect = function () {
     conn.write('Name: MH');
   });
 
+  // setInterval(() => {
+  //   conn.write('Move: up');
+  // }, 50);
+  // conn.on('connect', () => {
+  //   conn.write('Move: up');
+  // });
+
   conn.setTimeout(2000);
   conn.on('timeout', () => {
     console.log('you ded cuz you idled');
@@ -31,7 +38,7 @@ const connect = function () {
 console.log('Connecting...');
 connect();
 
-module.exports = connect;
+module.exports = {connect};
 
 // Consider what is happening in the code that you wrote so far:
 
