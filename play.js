@@ -4,6 +4,7 @@ const {connect} = require('./client');
 const {setupInput} = require('./input');
 
 console.log('Connecting...');
-connect();
 
-setupInput();
+const conn = connect();
+// pass object returned from connect fn into setupInput to be able to interact with server
+setupInput(conn);
