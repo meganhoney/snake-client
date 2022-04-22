@@ -1,7 +1,7 @@
 // stores active TCP connection object
 let connection;
 
-const handleUserInput = function (input) {
+const handleUserInput = function(input) {
   if (input === '\u0003') {
     process.exit();
   } else if (input === 'w') {
